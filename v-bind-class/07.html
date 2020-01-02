@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Hola mundo con Vue.js</title>
+</head>
+
+<body>
+  
+  <div id="app" class="container mt-5 p-2">
+    <div :class="[fondo, 'p-3', 'rounded', 'show', 'shadow', 'text-white']">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ut dolor officiis excepturi sit harum consectetur aspernatur, incidunt eos, voluptates repudiandae possimus assumenda corrupti quibusdam quis deserunt omnis quaerat temporibus.</p>
+    </div>
+    <input type="text" class="form-control my-3" v-model="inputfondo" @keyup.enter="changeBackground">
+
+    <div class="bg-dark text-white rounded shadow p-3" :class="{'invisible' : invisible}">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione culpa deserunt consectetur, neque obcaecati, expedita adipisci error nesciunt mollitia praesentium harum sed itaque facere non cumque dolores nam quo. Aspernatur?</p>
+
+    </div>
+    <button class="btn btn-primary" @click="invisible = !invisible">Look the hidden divs!</button>
+  </div>
+  
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="07.js"></script>
+</body>
+
+</html>
