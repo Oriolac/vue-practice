@@ -24,10 +24,15 @@
         template:
         `
         <div>
-            <h1>Número {{ $store.state.numero }} </h1>
+            <h1>Número {{ numero }} </h1>
             <hijo></hijo>
             </div>
-        `
+        `,
+        computed: {
+            numero() {
+                return store.state.numero;
+            }
+        }
     });
 
     Vue.component('hijo', {
