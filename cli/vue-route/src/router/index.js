@@ -22,7 +22,7 @@ const routes = [
   },
   {
     path: '/fotos/:id',
-    name: 'fotos',
+    name: 'fotosid',
     component: () => import('@/views/Fotos.vue'),
   },
   {

@@ -2,7 +2,7 @@
     <div>
         <h1>Galería de fotos</h1>
 
-        <router-link :to="{name: 'fotos', params: {id : item}}"
+        <router-link :to="{name: 'fotosid', params: {id : item}}"
         v-for="(item, index) of fotosArreglo" :key="index">
             <button> foto {{item}} </button>
         </router-link>
